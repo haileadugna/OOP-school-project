@@ -1,0 +1,34 @@
+sql = "insert into book"
+                + "values('" + abook.getBookName() + "','" + abook.getAuthorName()
+                + "','" + abook.getISBN + "','" + abook.getEdition() + "','"
+                 + abook.getYearOfPublication() + "','"+ abook.getGenre + "','" + abook.getPublisher() + "','" + 
+                 abook.getCurrentNumberOfBook + "','" + abook.getPrice() + "')";
+
+
+
+
+
+
+
+
+
+
+try{
+      String sql = "insert into book"
+                + "values('" + abook.getBookName() + "','" + abook.getAuthorName()
+                + "','" + abook.getISBN() + "','" + abook.getEdition() + "','"
+                 + abook.getYearOfPublication() + "','"+ abook.getGenre() + "','" + abook.getPublisher() + "','" + 
+                 abook.getCurrentNumberOfBook() + "','" + abook.getPrice() + "')";
+
+      Class.forName("com.mysql.cj.jdbc.Driver");  
+      Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Alpha_Book_Store","root","");  
+      
+      Statement stmt = con.createStatement();  
+      // ResultSet rs = stmt.executeQuery("insert into book values");
+      // while(rs.next()) {  
+      //     System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
+      // }
+      con.close();  
+        }
+        catch(Exception e){ System.out.println(e);} 
+  }
