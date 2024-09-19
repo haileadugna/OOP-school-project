@@ -1,1 +1,1 @@
-# OOP-school-project
+# OOP-campus-project
